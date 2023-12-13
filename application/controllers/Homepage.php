@@ -12,12 +12,6 @@ class Homepage extends CI_Controller {
 
 	public function index()
 	{
-		if(empty($data))
-		{
-			redirect(site_url() . 'login');
-		}
-		else{
-			$this->load->view('welcome');
-		}
+		$this->load->view('homeview');
 	}
 }
