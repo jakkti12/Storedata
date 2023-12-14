@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
     <h1>hello</h1>
+    <img src="../../assets/img/Logo.png" alt="">
+    <a href="<?php echo base_url('login'); ?>">login</a>
 <body>
     <?php if (empty($this->session->userdata['email'])) {
     } else { ?>

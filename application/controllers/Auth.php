@@ -10,6 +10,7 @@ class Auth extends CI_Controller
 		$this->load->library('curl','password');
 		$this->load->model('user_model');
 		$this->load->helper(array('form', 'url'));
+		$this->load->view('bootstrap');
 	}
 
 	public function index()
