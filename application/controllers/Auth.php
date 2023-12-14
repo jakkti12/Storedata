@@ -7,7 +7,7 @@ class Auth extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('curl','password');
+		$this->load->library('curl', 'password');
 		$this->load->model('user_model');
 		$this->load->helper(array('form', 'url'));
 		$this->load->view('bootstrap');
@@ -78,8 +78,7 @@ class Auth extends CI_Controller
 					} elseif ($userInfo->banned_users == "ban") {
 						$this->session->set_flashdata('danger_message', 'You’re temporarily banned from our website!');
 						redirect(site_url() . 'login');
-					} elseif ($userInfo && $userInfo->banned_users == "unban")
-					{
+					} elseif ($userInfo && $userInfo->banned_users == "unban") {
 						foreach ($userInfo as $key => $val) {
 							$this->session->set_userdata($key, $val);
 						}
@@ -96,12 +95,29 @@ class Auth extends CI_Controller
 
 	public function register()
 	{
-		$this->load->view('auth/register');
+		$data = $this->session->userdata;
+		if (empty($data['email'])) {
+
+			$this->form_validation->set_rules('firstname', 'Firstr name', 'trim|required|min_length[1]|max_length[50]');
+			$this->form_validation->set_rules('lastname', 'Last name', 'trim|required|min_length[1]|max_length[50]');
+			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[2]');
+			$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required|matches[password]');
+
+			if($this->form_validation->run() == FALSE)
+			{
+				$this->load->view('auth/register');
+			}else{
+				
+			}
+		} else {
+			redirect(site_url() . '');
+		}
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
-        redirect(site_url() . 'login');
+		redirect(site_url() . 'login');
 	}
 }
