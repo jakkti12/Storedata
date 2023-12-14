@@ -26,11 +26,11 @@
     <div style="text-align:center;" class="form-group">
       <div style="display: inline-block;"><?php echo $this->recaptcha->render(); ?></div>
     </div>
-    <?php
+  <?php
   }
   echo '<br/>';
   echo form_submit(array('value' => 'Login', 'class' => '')); ?>
-    <?php echo form_close(); ?>
+  <?php echo form_close(); ?>
 </div>
 <div class="container" style="position: relative; top:100px; z-index:3;">
   <br>
