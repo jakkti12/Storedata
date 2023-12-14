@@ -11,6 +11,6 @@ class Homepage extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('homeview');
+		$this->load->view('homepage');
 	}
 }
