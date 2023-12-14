@@ -41,4 +41,26 @@ class User_model extends CI_Model
         $this->db->from('settings');
         return $this->db->get()->row();
     }
+
+    public function isDuplicate($email)
+    {
+        $this->db->get_where('users', array('email' => $email), 1);
+        return $this->db->affected_rows() > 0 ? TRUE : FALSE;
+    }
+
+    public function addUser($d)
+    {
+        $string = array(
+            'user' => $d['user'],
+            'email' => $d['email'],
+            'phone_number' => $d['phone'],
+            'password' => $d['password'],
+            'role' => $d['role'],
+            'status' => $this->status[1],
+            'banned_users' => $this->banned_users[1]
+        );
+        $q = $this->db->insert_string('users', $string);
+        $this->db->query($q);
+        return $this->db->insert_id();
+    }
 }
