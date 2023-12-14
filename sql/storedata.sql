@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 13, 2023 at 02:57 AM
+-- Generation Time: Dec 14, 2023 at 08:31 AM
 -- Server version: 8.0.31
 -- PHP Version: 7.4.33
 
@@ -117,22 +117,23 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
+  `user` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `role` varchar(10) NOT NULL,
   `password` text NOT NULL,
   `last_login` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL,
   `banned_users` varchar(100) NOT NULL,
+  `phone_number` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `role`, `password`, `last_login`, `status`, `banned_users`) VALUES
-(1, 'admin@gmail.com', 'Admin', 'Admin', '1', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-12 03:20:06 AM', 'approved', 'unban');
+INSERT INTO `users` (`id`, `email`, `user`, `role`, `password`, `last_login`, `status`, `banned_users`, `phone_number`) VALUES
+(1, 'admin@gmail.com', 'Admin', '1', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-14 06:39:55 AM', 'approved', 'unban', '0980000000'),
+(2, 'mamon@gmail.com', 'mamon', '4', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-14 06:46:18 AM', 'approved', 'unban', '0123456789');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
