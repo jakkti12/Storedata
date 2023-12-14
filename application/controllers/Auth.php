@@ -7,7 +7,7 @@ class Auth extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('session');
+		$this->load->library('curl','password');
 		$this->load->model('user_model');
 		$this->load->helper(array('form', 'url'));
 	}
@@ -42,7 +42,6 @@ class Auth extends CI_Controller
 				$clean = $this->security->xss_clean($post);
 				$userInfo = $this->user_model->checkLogin($clean);
 				if ($data['recaptcha'] == 'yes') {
-					//recaptcha
 					$recaptchaResponse = $this->input->post('g-recaptcha-response');
 					$userIp = $_SERVER['REMOTE_ADDR'];
 					$key = $this->recaptcha->secret;
@@ -58,7 +57,6 @@ class Auth extends CI_Controller
 						redirect(site_url() . 'login');
 					} else if (!$status['success']) {
 
-						//recaptcha failed
 						$this->session->set_flashdata('flash_message', 'Error...! Google Recaptcha UnSuccessful!');
 						redirect(site_url() . 'login');
 						exit;
@@ -97,7 +95,7 @@ class Auth extends CI_Controller
 
 	public function register()
 	{
-		
+		$this->load->view('auth/register');
 	}
 
 	public function logout()

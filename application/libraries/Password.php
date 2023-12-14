@@ -16,7 +16,6 @@ class Password
 
     function create_hash($password)
 	{
-		// format: algorithm:iterations:salt:hash
 		$salt = base64_encode(password_hash(self::PBKDF2_SALT_BYTE_SIZE, MCRYPT_DEV_URANDOM));
 		return self::PBKDF2_HASH_ALGORITHM . ":" . self::PBKDF2_ITERATIONS . ":" .  $salt . ":" .
 			base64_encode($this->pbkdf2(
@@ -42,11 +41,8 @@ class Password
 
 		$output = "";
 		for($i = 1; $i <= $block_count; $i++) {
-			// $i encoded as 4 bytes, big endian.
 			$last = $salt . pack("N", $i);
-			// first iteration
 			$last = $xorsum = hash_hmac($algorithm, $last, $password, true);
-			// perform the other $count - 1 iterations
 			for ($j = 1; $j < $count; $j++) {
 				$xorsum ^= ($last = hash_hmac($algorithm, $last, $password, true));
 			}
