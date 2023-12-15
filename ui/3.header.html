@@ -11,113 +11,134 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#35446d ;">
-			<div class="container-fluid">
-				<a href="" style="margin-left: 20px;"
-					><img src="../assets/img/Logo.png" alt="./." width="100px"
-				/></a>
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		<nav class="nav navbar navbar-expand-sm  navbar-dark" style="background-color:#35446d ;">
+			<div class=" container-fluid">
+				<a class="navbar-brand" href=""><img src="../assets/img/Logo.png" alt="" style="height: 100px;"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="font collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="font navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active text-light"  aria-current="page" href="#"
-								>หน้าแรก</a
-							>
+							<a class="font nav-link text-light" href="">หน้าหลัก</a>
 						</li>
-						<li class="nav-item dropdown " >
-							<a
-								class="nav-link dropdown-toggle text-light"
-								href="#"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								รายการ
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><hr class="dropdown-divider" /></li>
-								<li>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</li>
+						<li class="font nav-item dropdown">
+							<a class="font nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">รายการอาหาร</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Link</a></li>
+								<li><a class="dropdown-item" href="#">Another link</a></li>
+								<li><a class="dropdown-item" href="#">A third link</a></li>
 							</ul>
 						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle text-light"
-								href="#"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								การสั่งซื้อ
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><hr class="dropdown-divider" /></li>
-								<li>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</li>
+						<li class="font nav-item dropdown">
+							<a class="font nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">การสั่งซื้อ</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Link</a></li>
+								<li><a class="dropdown-item" href="#">Another link</a></li>
+								<li><a class="dropdown-item" href="#">A third link</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active text-light" aria-current="page" href="#"
-								>หน้าแรก</a
-							>
+							<a class="font nav-link text-light" href="">เมนูแนะนำ</a>
 						</li>
-                        <li class="nav-item">
-							<a class="nav-link active text-light" style="margin-left: 850px;" aria-current="page" href="#"
-								>เข้าสู่ระบบ</a
-							>
-						</li>
-                        <li class="nav-item">
-							<a class="nav-link active text-light"  aria-current="page" href="#"
-								>สมัครสมาชิก</a
-							>
-						</li>
+						
+						
 					</ul>
+						<div style="margin-left:auto;">
+						<div class="font nav-item">
+							<li class="nav-item">
+								<a class="nav-link active text-light"  aria-current="page" href="#"
+									>เข้าสู่ระบบ</a
+								>
+							</li>
+						</div>
+						<div style="margin-left:auto;">
+
+							<li class="nav-item">
+								<a class="nav-link active text-light"  aria-current="page" href="#"
+									>สมัครสมาชิก</a
+								>
+							</li>
+						</li>
+						</div> 
 				</div>
 			</div>
-		</nav>
+		</nav> 
+		
+
 	</body>
 </html>
 
-<!-- <nav class="nav navbar navbar-expand-sm bg-dark navbar-dark" style="position:fixed; width:100%; z-index: 5;">
-	<div class="container container-fluid">
-		<a class="navbar-brand" href=""><img src="../../img/logo.png" alt="" style="height: 50px;"></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="font collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="font navbar-nav">
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#35446d ;">
+	<div class="container-fluid">
+		<a href="" style="margin-left: 20px;"
+			><img src="../assets/img/Logo.png" alt="./." width="100px"
+		/></a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="font nav-link" href="">หน้าหลัก</a>
+					<a class="nav-link active text-light"  aria-current="page" href="#"
+						>หน้าแรก</a
+					>
 				</li>
-				<li class="nav-item">
-					<a class="font nav-link" href="">สินค้า</a>
-				</li>
-				<li class="font nav-item dropdown">
-					<a class="font nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Link</a></li>
-						<li><a class="dropdown-item" href="#">Another link</a></li>
-						<li><a class="dropdown-item" href="#">A third link</a></li>
+				<li class="nav-item dropdown " >
+					<a
+						class="nav-link dropdown-toggle text-light"
+						href="#"
+						id="navbarDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+					>
+						รายการ
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider" /></li>
+						<li>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</li>
 					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a
+						class="nav-link dropdown-toggle text-light"
+						href="#"
+						id="navbarDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+					>
+						การสั่งซื้อ
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li><hr class="dropdown-divider" /></li>
+						<li>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active text-light" aria-current="page" href="#"
+						>หน้าแรก</a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active text-light" style="margin-left: 850px;" aria-current="page" href="#"
+						>เข้าสู่ระบบ</a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active text-light"  aria-current="page" href="#"
+						>สมัครสมาชิก</a
+					>
 				</li>
 			</ul>
-				<div style="margin-left:auto;">
-				<li class="font nav-item dropdown">
-					<a class="font nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profile</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="profile">แก้ไขข้อมูล</a></li>
-						<li><a class="dropdown-item" href="">Log Out</a></li>
-					</ul>
-				</li>
-				</div>
 		</div>
 	</div>
 </nav> -->
