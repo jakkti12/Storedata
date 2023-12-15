@@ -14,14 +14,19 @@
       <img style="width: 300px" src="../assets/img/Logo.png" />
     </div>
     <form action="login" method="post">
-    <div class="row mt-5 justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <div class="card" style="border-radius: 50px;">
-          <div class="card-body" style="margin-left: 40px; margin-right: 40px;">
-            <div class="row text-center">
-              <h4 style="color: #35446D; font-weight: 800; font-family: 'Inter', sans-serif;
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card" style="border-radius: 50px;">
+            <div class="card-body" style="margin-left: 40px; margin-right: 40px;">
+              <div class="row text-center">
+                <div style="position:relative; top:20px;" class="text-end">
+                  <a href="<?php echo base_url(''); ?>">
+                    <img src="../../../assets/img/close.png" alt="" style="width: 15px;">
+                  </a>
+                </div>
+                <h4 style="color: #35446D; font-weight: 800; font-family: 'Inter', sans-serif;
                 font-family: 'Lato', sans-serif;">เข้าสู่ระบบ</h4>
-            </div>
+              </div>
               <div class="form-group mb-2">
                 <label for="inputEmail" class="form-label"></label>
                 <input name="email" value="<?php echo set_value('email') ?>" type="email" class="form-control" id="inputEmailORTel" aria-describedby="emailHelp" placeholder="เบอร์โทรศัพท์ / Email" style="border-radius: 15px; background-color: #f8f9fa; border: none;" />
@@ -48,10 +53,10 @@
               <div class="text-center mt-3">
                 <p class="text-secondary">คุณมีบัญชีแล้วหรือยัง ? <a href="<?php echo base_url('auth/register'); ?>" class="link-primary" style="color: #35446D; font-weight: 800; text-decoration:none;">สมัครสมาชิก</a></p>
               </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </form>
   </div>
   </div>
