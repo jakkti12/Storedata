@@ -13,6 +13,6 @@ class Homepage extends CI_Controller
     {
         $this->load->view('header');
         $this->load->view('content');
-        $this->load->view('content');
+        $this->load->view('footer');
     }
 }

@@ -34,9 +34,9 @@ class Auth extends CI_Controller
         // $dataLevel = $this->userlevel->checkLevel($data['role']);
 
         if (empty($this->session->userdata['email'])) {
-            redirect(site_url() . 'login');
+            redirect(site_url() . 'auth/login');
         } else {
-            $this->load->view('homepage',$data);
+            redirect(site_url() . '');
         }
 	}
 
