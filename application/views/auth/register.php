@@ -13,12 +13,8 @@
 
 <body>
     <div class="container-fluid" style="margin-top: -30px;">
-        <div class="row text-center">
-            <div class="col">
-                <div class="w-100 p-1">
-                    <img src="/assets/img//Logo.png">
-                </div>
-            </div>
+        <div class="text-center">
+                <a href="<?php echo base_url('') ?>"><img src="/assets/img//Logo.png"></a>
         </div>
         <div class="row  justify-content-center">
             <div class="col-md-8 col-lg-6">

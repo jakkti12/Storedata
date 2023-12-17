@@ -11,7 +11,7 @@
 <body>
   <div class="container-fluid" style="margin-top: -30px;">
     <div class="text-center">
-      <img src="/assets/img//Logo.png" />
+      <a href="<?php echo base_url('') ?>"><img src="/assets/img//Logo.png" /></a>
     </div>
     <form action="login" method="post">
       <div class="row mt-5 justify-content-center">
