@@ -12,7 +12,7 @@
 
 <body>
 	<nav class="nav navbar navbar-expand-sm  navbar-dark" style="background-color:#35446d ; margin-top: -20px; height: auto;">
-		<div class="container-fluid">
+		<div class="container-fluid"><div style="width: 40px;"></div> 
 			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img src="../assets/img/Logo.png" alt="" style="height: 150px;"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -59,13 +59,14 @@
 							<a class="nav-link active text-light" aria-current="page" href="<?php echo base_url('register') ?>" style="font-weight:700;">สมัครสมาชิก</a>
 						</li>
 					</div>
+					<div style="width: 40px;"></div> 
 				<?php } else { ?>
-					<div style="margin-left:auto;">
-						<div class="font nav-item">
+					<div style="margin-left: auto; ">
+						<div class="nav-item">
 							<li class="nav-item">
 							<li class="font nav-item dropdown">
 						<a class="font nav-link dropdown-toggle text-light" href="#" style="font-weight:700;" role="button" data-bs-toggle="dropdown">
-							<img src="" alt="">
+							<img src="/assets/img//user_icon.png" alt="">
 						</a>
 						<ul class="dropdown-menu" style="font-weight:700; font-size:16px;">
 							<li><a class="dropdown-item" href="#">เมนู ปู</a></li>
@@ -74,7 +75,8 @@
 					</li>
 							</li>
 						</div>
-					</div>    
+					</div>
+					<div style="width: 80px;"></div> 
 				<?php } ?>
 			</div>
 		</div>
@@ -85,7 +87,11 @@
 		<P>รวบรวมอาหารซีฟู้ด แสนอร่อย</P>
 	</div>
 </body>
-
+<style>
+	.f{
+		margin-right: ;
+	}
+</style>
 </html>
 
 <!-- <!DOCTYPE html>

@@ -9,19 +9,19 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid" style="margin-top: -30px;">
     <div class="text-center">
-      <img style="width: 300px" src="../assets/img/Logo.png" />
+      <img src="/assets/img//Logo.png" />
     </div>
     <form action="login" method="post">
       <div class="row mt-5 justify-content-center">
         <div class="col-md-8 col-lg-6">
-          <div class="card" style="border-radius: 50px;">
+          <div class="card" style="border-radius: 50px; margin-top: -50px;">
             <div class="card-body" style="margin-left: 40px; margin-right: 40px;">
               <div class="row text-center">
                 <div style="position:relative; top:20px;" class="text-end">
                   <a href="<?php echo base_url(''); ?>">
-                    <img src="../../../assets/img/close.png" alt="" style="width: 15px;">
+                    <img src="/assets/img//close.png" alt="">
                   </a>
                 </div>
                 <h4 style="color: #35446D; font-weight: 800; font-family: 'Inter', sans-serif;

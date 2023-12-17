@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row text-center mt-1">
+    <div class="container-fluid" style="margin-top: -30px;">
+        <div class="row text-center">
             <div class="col">
                 <div class="w-100 p-1">
-                    <img style="width: 300px" src="../assets/img/Logo.png" />
+                    <img src="/assets/img//Logo.png">
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                     <div class="card-body" style="margin: 50px;">
                         <div style="position:relative; top:-20px;" class="text-end">
                             <a href="<?php echo base_url(''); ?>">
-                                <img src="../../../assets/img/close.png" alt="" style="width: 15px;">
+                                <img src="/assets/img//close.png" alt="">
                             </a>
                         </div>
                         <h4 class="text-center" style="color:#35446D; margin-top: -40px;
