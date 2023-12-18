@@ -21,7 +21,7 @@
               <div class="row text-center">
                 <div style="position:relative; top:20px;" class="text-end">
                   <a href="<?php echo base_url(''); ?>">
-                    <img src="/assets/img//close.png" alt="">
+                    <img src="/assets/img/close.png" alt="">
                   </a>
                 </div>
                 <h4 style="color: #35446D; font-weight: 800; font-family: 'Inter', sans-serif;
