@@ -26,9 +26,9 @@
                         FOLLOW US
                         <br />Tel : 066-070-6916 <br />Email : spicyseafood@gmail.com
                     </h3>
-                    <img src="/assets/img//facebook.png" alt="" />
-                    <img src="/assets/img//line.png" alt="" />
-                    <img src="/assets/img//youtube.png" alt="" />
+                    <a href="<?php echo prep_url('facebook.com'); ?>"><img src="/assets/img//facebook.png" alt="" /></a>
+                    <a href="<?php echo prep_url('lnwmon.com'); ?>"><img src="/assets/img//line.png" alt="" /></a>
+                    <a href="<?php echo prep_url('youtube.com'); ?>"><img src="/assets/img//youtube.png" alt="" /></a>
                 </div>
             </div>
             <div style="height: 50px;"></div>
