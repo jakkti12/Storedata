@@ -67,7 +67,7 @@
                     
                     <li class="font nav-item dropdown">
                         <a class="font nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">
-                            <img src="/assets/img/user_icon.png" alt="">
+                            <img src="/assets/img//user_icon.png" alt="">
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a></li>

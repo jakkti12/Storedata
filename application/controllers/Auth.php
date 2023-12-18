@@ -127,7 +127,7 @@ class Auth extends CI_Controller
         } else {
             if ($this->user_model->isDuplicate($this->input->post('email'))) {
                 $this->session->set_flashdata('flash_message', 'User email already exists');
-                redirect(site_url() . 'auth/register');
+                redirect(site_url() . 'register');
             } else {
                 $this->load->library('password');
                 $post = $this->input->post(NULL, TRUE);
@@ -147,7 +147,7 @@ class Auth extends CI_Controller
                 } else {
                     $this->session->set_flashdata('success_message', 'New user has been added.');
                 }
-                redirect(site_url() . 'auth/login');
+                redirect(site_url() . 'login');
             };
         }
 	}
@@ -155,6 +155,6 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(site_url() . 'auth/login');
+		redirect(site_url() . 'login');
 	}
 }
