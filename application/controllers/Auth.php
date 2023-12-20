@@ -18,7 +18,6 @@ class Auth extends CI_Controller
         $this->status = $this->config->item('status');
         $this->banned_users = $this->config->item('banned_users');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->load->view('bootstrap');
 	}
 
 	public function index()
@@ -31,12 +30,12 @@ class Auth extends CI_Controller
         if (empty($data['role'])) {
             redirect(site_url() . 'auth/login');
         }
-        // $dataLevel = $this->userlevel->checkLevel($data['role']);
+        $dataLevel = $this->userlevel->checkLevel($data['role']);
 
         if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');
         } else {
-            redirect(site_url() . '');
+            redirect(site_url() . '',$dataLevel);
         }
 	}
 

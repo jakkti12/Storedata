@@ -5,23 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="/assets/css//bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <nav class="nav navbar navbar-expand-sm  navbar-dark" style="background-color:#35446d ; height: auto;">
-    <div style="width: 40px;"></div>
+        <div style="width: 40px;"></div>
         <div class=" container-fluid">
-            <a class="navbar-brand" href=""><img src="../assets/img/Logo.png" alt="" style="height: 100px;"></a>
+            <a class="navbar-brand" href="<?php echo base_url(''); ?>"><img src="/assets/img//Logo.png" alt="" style="height: 100px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="font collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="font navbar-nav">
                     <li class="nav-item">
-                        <a class="font nav-link text-light" href="">หน้าหลัก</a>
+                        <a class="font nav-link text-light" href="<?php echo base_url(''); ?>">หน้าหลัก</a>
                     </li>
                     <li class="font nav-item dropdown">
                         <a class="font nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">รายการอาหาร</a>
@@ -64,16 +63,24 @@
                     <div style="width: 40px;"></div>
 
                 <?php } else { ?>
-                    
-                    <li class="font nav-item dropdown">
-                        <a class="font nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">
-                            <img src="/assets/img//user_icon.png" alt="">
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url() . 'logout' ?>">ออกจากระบบ</a></li>
-                        </ul>
-                    </li>
+
+                    <div style="margin-left:auto;" class="btn-group">
+                        <li class="font nav-item navbar-nav">
+                            <a class="font nav-link text-light" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-user"></i> 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                                <li><a class="dropdown-item" href="edit">
+                                    <img src="<?php echo $user_img ?>" class="rounded-circle" alt="" width="50px" height="auto">
+                                    <?php
+                                    echo $user;
+                                    ?>
+                                </a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url() . 'logout' ?>">ออกจากระบบ</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div style="width: 100px;"></div>
 
                 <?php } ?>
 

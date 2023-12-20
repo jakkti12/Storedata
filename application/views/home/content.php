@@ -11,7 +11,7 @@
 <body>
     <!-- content -->
     <div class="text-center">
-        <img src="../assets/img/content.jpg" alt="" width="1000px" height="auto" class="rounded-4" style="margin-top: -50px; border-radius: 20px;">
+        <img src="../assets/img/content.jpg" alt="" width="800px" height="auto" class="rounded-4" style="margin-top: -50px; border-radius: 20px;">
     </div>
         <div class="text-center pt-4">
             <h5 style="color: #35446d; font-weight: 700;">สินค้าแนะนำ</h5>
