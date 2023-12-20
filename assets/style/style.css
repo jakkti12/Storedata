@@ -1,0 +1,16 @@
+.font20{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.spacing{
+    letter-spacing: 6px;
+}
+.img-800{
+    width: 70%;
+}
+.edit_profile{
+    border-radius: 15px;
+    background-color: #f8f9fa; 
+    border: none;
+}

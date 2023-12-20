@@ -59,7 +59,10 @@ $route['register'] = 'auth/register';
 $route['logout'] = 'auth/logout';
 
 //user
-$route['edit'] = 'user/user/edit';
+$route['edit'] = 'user/user/edit_profile';
+$route['edit/profile'] = 'user/user/profile_update';
+$route['edit/user'] = 'user/user/user_update';
+
 
 //admin
 // $route['edit'] = 'admin_edit/edit';

@@ -134,7 +134,7 @@ class Auth extends CI_Controller
                 $hashed = $this->password->create_hash($cleanPost['password']);
                 $cleanPost['email'] = $this->input->post('email');
                 $cleanPost['role'] = '4';//$this->input->post('role');
-                $cleanPost['firstname'] = $this->input->post('firstname');
+                $cleanPost['user'] = $this->input->post('user');
                 $cleanPost['phone'] = $this->input->post('phone');
                 $cleanPost['banned_users'] = 'unban';
                 $cleanPost['password'] = $hashed;

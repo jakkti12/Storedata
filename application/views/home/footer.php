@@ -12,16 +12,16 @@
     <footer>
         <div class="container-fluid" style="background-color: #35446d">
             <div class="row">
-                <div class="col text-center">
-                    <img src="/assets/img//Logo.png" style="width: 180px;" />
+                <div class="col-md-4 text-center">
+                    <img src="/assets/img//Logo.png" style="width: 200px;" />
                 </div>
-                <div class="col mt-5 ">
+                <div class="col-md-4 mt-5 ">
                     <h3 style="color: aliceblue;  font-size:18px;">
                         ที่อยู่ 401/31 บ.ขี้เหล็กใหญ่
                         <br />ม.9 ต.ในเมือง อ.เมือง จ.ชัยภูมิ <br />36000
                     </h3>
                 </div>
-                <div class="col mt-5">
+                <div class="col-md-4 mt-5">
                     <h3 style="color: aliceblue; font-size:18px;">
                         FOLLOW US
                         <br />Tel : 066-070-6916 <br />Email : spicyseafood@gmail.com
