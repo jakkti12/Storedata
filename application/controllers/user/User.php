@@ -18,9 +18,23 @@ class User extends CI_Controller
     public function edit_profile()
     {
         $data = $this->session->userdata;
-        $this->load->view('home/header', $data);
-        $this->load->view('user/edit_profile', $data, array('error' => ' '));
-        $this->load->view('home/footer');
+        if (empty($data)) {
+            redirect(site_url() . 'auth/login');
+        }
+
+        if (empty($data['role'])) {
+            redirect(site_url() . 'auth/login');
+        }
+        $dataLevel = $this->userlevel->checkLevel($data['role']);
+
+        if (empty($this->session->userdata['email'])) {
+            redirect(site_url() . 'auth/login');
+        } else {
+            $data = $this->session->userdata;
+            $this->load->view('home/header', $data);
+            $this->load->view('user/edit_profile', $data, array('error' => ' '));
+            $this->load->view('home/footer');
+        }
     }
 
     public function profile_update()
@@ -44,32 +58,31 @@ class User extends CI_Controller
             // $error = array('error' => $this->upload->display_errors());
 
             echo show_404();
-
         } else {
             $data = array('upload_data' => $this->upload->data());
             $up = $this->upload->data('file_name');
-            $upload['update_profile'] = '/upload/user_upload/'.$up;
+            $upload['update_profile'] = '/upload/user_upload/' . $up;
 
             if (!$this->edit->updateprofile($upload)) {
                 $this->session->set_flashdata('flash_message', 'There was a problem add new user');
             } else {
                 $this->session->set_flashdata('success_message', 'New user has been added.');
             }
-            redirect(site_url('') . 'edit');
+            redirect(site_url('') . 'logout');
         }
     }
 
     public function user_update()
     {
         $data = $this->session->userdata;
-        if(empty($data['role'])){
-	        redirect(site_url().'login');
-	    }
+        if (empty($data['role'])) {
+            redirect(site_url() . 'login');
+        }
 
         $dataInfo = array(
-            'id'=>$data['id']
+            'id' => $data['id']
         );
-        
+
         $data['title'] = "Change Password";
         $this->form_validation->set_rules('user', 'User', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
@@ -83,24 +96,23 @@ class User extends CI_Controller
             $this->load->view('home/header', $data);
             $this->load->view('user/edit_profile', $data, array('error' => ' '));
             $this->load->view('home/footer');
-
-        }else{
+        } else {
             $this->load->library('password');
             $post = $this->input->post(NULL, TRUE);
             $cleanPost = $this->security->xss_clean($post);
             $hashed = $this->password->create_hash($cleanPost['password']);
-            
+
             $cleanPost['user_id'] = $dataInfo['id'];
             $cleanPost['email'] = $this->input->post('email');
             $cleanPost['firstname'] = $this->input->post('firstname');
             $cleanPost['password'] = $hashed;
-            
-            if(!$this->edit->updateuser($cleanPost)){
+
+            if (!$this->edit->updateuser($cleanPost)) {
                 $this->session->set_flashdata('flash_message', 'There was a problem updating your profile');
-            }else{
+            } else {
                 $this->session->set_flashdata('success_message', 'Your profile has been updated.');
             }
-            redirect(site_url().'');
+            redirect(site_url() . '');
         }
     }
 }

@@ -146,7 +146,8 @@ class Auth extends CI_Controller
                 } else {
                     $this->session->set_flashdata('success_message', 'New user has been added.');
                 }
-                redirect(site_url() . 'login');
+                $this->session->sess_destroy();
+				redirect(site_url() . 'edit');
             };
         }
 	}
