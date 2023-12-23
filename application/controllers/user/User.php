@@ -25,7 +25,7 @@ class User extends CI_Controller
         if (empty($data['role'])) {
             redirect(site_url() . 'auth/login');
         }
-        $dataLevel = $this->userlevel->checkLevel($data['role']);
+        // $dataLevel = $this->userlevel->checkLevel($data['role']);
 
         if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');

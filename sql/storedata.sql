@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 14, 2023 at 08:31 AM
--- Server version: 8.0.31
+-- Generation Time: Dec 23, 2023 at 09:24 AM
+-- Server version: 8.2.0
 -- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -20,6 +20,111 @@ SET time_zone = "+00:00";
 --
 -- Database: `storedata`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_crab`
+--
+
+DROP TABLE IF EXISTS `menu_crab`;
+CREATE TABLE IF NOT EXISTS `menu_crab` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_fish`
+--
+
+DROP TABLE IF EXISTS `menu_fish`;
+CREATE TABLE IF NOT EXISTS `menu_fish` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_related_to_water`
+--
+
+DROP TABLE IF EXISTS `menu_related_to_water`;
+CREATE TABLE IF NOT EXISTS `menu_related_to_water` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_rice`
+--
+
+DROP TABLE IF EXISTS `menu_rice`;
+CREATE TABLE IF NOT EXISTS `menu_rice` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_shellfish`
+--
+
+DROP TABLE IF EXISTS `menu_shellfish`;
+CREATE TABLE IF NOT EXISTS `menu_shellfish` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_shrimp`
+--
+
+DROP TABLE IF EXISTS `menu_shrimp`;
+CREATE TABLE IF NOT EXISTS `menu_shrimp` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_squid`
+--
+
+DROP TABLE IF EXISTS `menu_squid`;
+CREATE TABLE IF NOT EXISTS `menu_squid` (
+  `id` int NOT NULL,
+  `name` int NOT NULL,
+  `amount` int NOT NULL,
+  `img` int NOT NULL,
+  `date` tinyint NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -124,6 +229,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `status` varchar(100) NOT NULL,
   `banned_users` varchar(100) NOT NULL,
   `phone_number` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `user_img` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
@@ -131,9 +237,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `user`, `role`, `password`, `last_login`, `status`, `banned_users`, `phone_number`) VALUES
-(1, 'admin@gmail.com', 'Admin', '1', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-14 06:39:55 AM', 'approved', 'unban', '0980000000'),
-(2, 'mamon@gmail.com', 'mamon', '4', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-14 06:46:18 AM', 'approved', 'unban', '0123456789');
+INSERT INTO `users` (`id`, `email`, `user`, `role`, `password`, `last_login`, `status`, `banned_users`, `phone_number`, `user_img`) VALUES
+(1, 'admin@gmail.com', 'Admin', '1', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-23 09:23:53 AM', 'approved', 'unban', '0980000000', '/upload/user_upload/content.jpg'),
+(2, 'mamon@gmail.com', 'mamon', '4', 'sha256:1000::RDSzmFu7FdqnVLMmCrX89yNnKeZQ3T7F', '2023-12-14 06:46:18 AM', 'approved', 'unban', '0123456789', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -9,6 +9,7 @@ class Auth extends CI_Controller
 
 	public function __construct()
 	{
+		//โหลดอัตโนมัติ ใช้ได้เฉพาะใน controllers นี้เท่านั้น
 		parent::__construct();
         $this->load->model('user_model');
         $this->load->library('password');
@@ -23,6 +24,8 @@ class Auth extends CI_Controller
 	public function index()
 	{
 		$data = $this->session->userdata;
+
+		//เช็คว่าใน data มีข้อมูลหรือไม่ ถ้าไม่มีให้ไปยังหน้า login
         if (empty($data)) {
             redirect(site_url() . 'auth/login');
         }
@@ -30,11 +33,15 @@ class Auth extends CI_Controller
         if (empty($data['role'])) {
             redirect(site_url() . 'auth/login');
         }
+
+		//เช็คว่า user อยู่ในระดับไหน
         $dataLevel = $this->userlevel->checkLevel($data['role']);
 
         if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');
-        } else {
+        } 
+		//ถ้ามีข้อมูลแล้วให้ไปยังหน้าหลัก
+		else {
             redirect(site_url() . '',$dataLevel);
         }
 	}
@@ -42,10 +49,12 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		$data = $this->session->userdata;
+		// ! คือทำในสิ่งที่ตรงข้ามกับแบบปกติ โดยใน if นี้จะทำหน้าที่ ถ้าเรามีข้อมูลอยู่ใน data แล้วจะไม่สามารถเข้าหน้า login ได้
 		if (!empty($data['email'])) {
 			redirect(site_url() . '');
 		} else {
 
+			//เป็น library ที่ชื่อ form_validation
 			$this->form_validation->set_rules('email', 'Email', 'required');
 			$this->form_validation->set_rules('password', 'Password', 'required');
 

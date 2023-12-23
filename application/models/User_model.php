@@ -50,6 +50,7 @@ class User_model extends CI_Model
 
     public function addUser($d)
     {
+        //user ข้าวหน้าคือ ชื่อของฐานข้อมูล user ข้างหลังคือตัวที่ส่งค่ามา จะใช้ชื่ออะไรก็ได้
         $string = array(
             'user' => $d['user'],
             'email' => $d['email'],
